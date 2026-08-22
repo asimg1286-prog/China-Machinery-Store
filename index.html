@@ -3,308 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asim Machinery Store</title>
+    <title>Asim Machinery Store - عاصم مشینری اسٹور</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
         body {
-            font-family: Arial, sans-serif;
-            background: #f5f7fa;
-            color: #222;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
         }
-
-        header {
-            background: #0b3d91;
+        .hero-section {
+            background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
             color: white;
-            padding: 18px 6%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 8px;
-            font-weight: bold;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, #0b3d91, #1769d1);
-            color: white;
+            padding: 45px 0;
             text-align: center;
-            padding: 70px 20px;
         }
-
-        .hero h1 {
-            font-size: 38px;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 25px;
-        }
-
-        .btn {
-            display: inline-block;
-            background: #f4b400;
-            color: #111;
-            padding: 13px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 5px;
-        }
-
-        .section {
-            padding: 50px 6%;
-        }
-
-        .section h2 {
-            text-align: center;
-            font-size: 30px;
-            margin-bottom: 30px;
-            color: #0b3d91;
-        }
-
-        .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .product {
-            background: white;
-            padding: 22px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            border: 1px solid #e1e8f0;
-        }
-
-        .product-image {
-            height: 150px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 15px;
-            overflow: hidden;
-            background: #e8eef7;
-        }
-
-        .product-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .product h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #111;
-        }
-
-        .description {
-            font-size: 14px;
-            color: #555;
-            margin-bottom: 15px;
-            line-height: 1.5;
-        }
-
-        .price-list {
-            background: #f8fafc;
-            border-radius: 8px;
-            padding: 12px;
-            margin-bottom: 15px;
-            text-align: right;
-            border: 1px solid #edf2f7;
-        }
-
-        .price-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 6px 0;
-            border-bottom: 1px dashed #cbd5e1;
-            font-size: 15px;
-        }
-
-        .price-item:last-child {
-            border-bottom: none;
-        }
-
-        .price-val {
-            color: #0b3d91;
-            font-weight: bold;
-        }
-
-        .order-btn {
+        .card {
             border: none;
-            background: #25d366;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 8px;
-            cursor: pointer;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease;
+            height: 100%;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+        }
+        .card-img-top {
+            height: 220px;
+            object-fit: cover;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+        .price-badge {
+            background-color: #e7f1ff;
+            color: #0d6efd;
             font-weight: bold;
-            width: 100%;
-            font-size: 16px;
+            padding: 6px 12px;
+            border-radius: 6px;
+            display: inline-block;
+            margin-bottom: 5px;
         }
-
-        .contact {
-            background: white;
-            text-align: center;
-            padding: 50px 20px;
-            border-top: 1px solid #eaeaea;
-        }
-
-        footer {
-            background: #17202a;
+        .btn-whatsapp {
+            background-color: #25d366;
             color: white;
-            text-align: center;
-            padding: 25px;
+            font-weight: bold;
+            border-radius: 8px;
         }
-
-        @media (max-width: 650px) {
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .hero h1 {
-                font-size: 30px;
-            }
+        .btn-whatsapp:hover {
+            background-color: #1da851;
+            color: white;
+        }
+        .footer {
+            background-color: #212529;
+            color: white;
+            padding: 25px 0;
+            margin-top: 50px;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="logo">
-        ⚙️ Asim Machinery Store
+    <!-- Header Section -->
+    <div class="hero-section">
+        <div class="container">
+            <h1 class="fw-bold mb-2">عاصم مشینری اسٹور</h1>
+            <p class="lead mb-3">تمام قسم کے واٹر پمپ، موٹریں، جنریٹرز اور الیکٹرک پاور ٹولز دستیاب ہیں</p>
+            <a href="https://wa.me/923030549454?text=السلام علیکم! مجھے مشینری کے بارے میں معلوم کرنا ہے۔" class="btn btn-whatsapp btn-lg shadow">
+                <i class="fab fa-whatsapp me-2"></i> واٹس ایپ پر رابطہ کریں: 03030549454
+            </a>
+        </div>
     </div>
-    <nav>
-        <a href="#home">ہوم</a>
-        <a href="#products">مصنوعات</a>
-        <a href="#contact">رابطہ</a>
-    </nav>
-</header>
 
-<section class="hero" id="home">
-    <h1>Asim Machinery Store</h1>
-    <p>معیاری مشینری، پمپ اور موٹرز مناسب قیمت پر</p>
-    <a class="btn" href="#products">مصنوعات دیکھیں</a>
-    <a class="btn" href="https://wa.me/923030549454">📱 واٹس ایپ پر رابطہ کریں</a>
-</section>
+    <!-- Products Section -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4 fw-bold text-dark">ہماری مصنوعات (Our Products)</h2>
+        <div class="row g-4">
 
-<section class="section" id="products">
-    <h2>ہماری مصنوعات</h2>
-
-    <div class="products">
-
-        <div class="product">
-            <div class="product-image">
-                <img src="https://images.unsplash.com/photo-1596706059223-9585675f8249?q=80&w=600&auto=format&fit=crop" alt="سبمرسیبل پمپ">
-            </div>
-            <h3>سبمرسیبل پمپ</h3>
-            <p class="description">ہماری پاس سبمرسیبل پمپ کی ہر کوالٹی موجود ہے (1HP سے 50HP تک)</p>
-            
-            <div class="price-list">
-                <div class="price-item"><span>1 HP:</span> <span class="price-val">Rs. 22,000</span></div>
-                <div class="price-item"><span>1.5 HP:</span> <span class="price-val">Rs. 26,000</span></div>
-                <div class="price-item"><span>2 HP:</span> <span class="price-val">Rs. 30,000</span></div>
-                <div class="price-item"><span>3 HP سے 50 HP:</span> <span class="price-val">قیمت معلوم کریں</span></div>
+            <!-- Submersible Pump -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Submersible Pump">
+                    <div class="card-body text-end">
+                        <h4 class="card-title fw-bold">سبمرسیبل بورنگ پمپ</h4>
+                        <p class="card-text text-muted">ہر سائز اور گہرائی کے لیے بہترین کوالٹی کے سبمرسیبل پمپ۔</p>
+                        <div class="mb-3">
+                            <span class="price-badge">1HP سے 15HP تک تمام سائز دستیاب</span>
+                        </div>
+                        <a href="https://wa.me/923030549454?text=السلام علیکم! مجھے سبمرسیبل پمپ کی قیمت معلوم کرنی ہے۔" class="btn btn-whatsapp w-100">
+                            <i class="fab fa-whatsapp me-1"></i> واٹس ایپ پر آرڈر کریں
+                        </a>
+                    </div>
+                </div>
             </div>
 
-            <button class="order-btn" onclick="order('سبمرسیبل پمپ')">
-                واٹس ایپ پر آرڈر کریں
-            </button>
+            <!-- Monoblock Pump -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Monoblock Pump">
+                    <div class="card-body text-end">
+                        <h4 class="card-title fw-bold">مونو بلاک واٹر پمپ</h4>
+                        <p class="card-text text-muted">گھریلو اور تجارتی استعمال کے لیے تیز رفتار واٹر پمپ۔</p>
+                        <div class="mb-3">
+                            <span class="price-badge">0.5HP, 1HP, 2HP پمپ</span>
+                        </div>
+                        <a href="https://wa.me/923030549454?text=السلام علیکم! مجھے مونو بلاک پمپ کی قیمت معلوم کرنی ہے۔" class="btn btn-whatsapp w-100">
+                            <i class="fab fa-whatsapp me-1"></i> واٹس ایپ پر آرڈر کریں
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Electric Motor -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Electric Motor">
+                    <div class="card-body text-end">
+                        <h4 class="card-title fw-bold">الیکٹرک موٹر</h4>
+                        <p class="card-text text-muted">سنگل فیز اور تھری فیز کاپر وائنڈنگ موٹریں۔</p>
+                        <div class="mb-3">
+                            <span class="price-badge">0.5HP سے 10HP تک دستیاب</span>
+                        </div>
+                        <a href="https://wa.me/923030549454?text=السلام علیکم! مجھے الیکٹرک موٹر کی قیمت معلوم کرنی ہے۔" class="btn btn-whatsapp w-100">
+                            <i class="fab fa-whatsapp me-1"></i> واٹس ایپ پر آرڈر کریں
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submersible Control Box -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Submersible Control Box">
+                    <div class="card-body text-end">
+                        <h4 class="card-title fw-bold">سبمرسیبل کنٹرول باکس</h4>
+                        <p class="card-text text-muted">پمپ کی حفاظت اور کنٹرول کے لیے بہترین پینل اور کنٹرول باکس۔</p>
+                        <div class="mb-3">
+                            <span class="price-badge">ڈیجیٹل اور آٹومیٹک پینل</span>
+                        </div>
+                        <a href="https://wa.me/923030549454?text=السلام علیکم! مجھے سبمرسیبل کنٹرول باکس کی قیمت معلوم کرنی ہے۔" class="btn btn-whatsapp w-100">
+                            <i class="fab fa-whatsapp me-1"></i> واٹس ایپ پر آرڈر کریں
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Petrol & Gas Generators -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1590086782792-42dd235c142d?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Generators">
+                    <div class="card-body text-end">
+                        <h4 class="card-title fw-bold">پٹرول اور گیس جنریٹرز</h4>
+                        <p class="card-text text-muted">گھروں، دکانوں اور انڈسٹری کے لیے ہیوی ڈیوٹی جنریٹرز۔</p>
+                        <div class="mb-3">
+                            <span class="price-badge">1KVA سے 10KVA تک تمام سائز</span>
+                        </div>
+                        <a href="https://wa.me/923030549454?text=السلام علیکم! مجھے جنریٹر کی قیمت اور تفصیلات معلوم کرنی ہیں۔" class="btn btn-whatsapp w-100">
+                            <i class="fab fa-whatsapp me-1"></i> واٹس ایپ پر آرڈر کریں
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Petrol Chainsaw -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1546252140-509d6f234d15?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Chainsaw">
+                    <div class="card-body text-end">
+                        <h4 class="card-title fw-bold">پٹرول مینوئل چین سا (Chainsaw)</h4>
+                        <p class="card-text text-muted">لکڑی اور درخت کاٹنے والی زبردست مینوئل چین سا مشین۔</p>
+                        <div class="mb-3">
+                            <span class="price-badge">بلیڈ سائز: 22" - 24" - 36"</span>
+                        </div>
+                        <a href="https://wa.me/923030549454?text=السلام علیکم! مجھے پٹرول چین سا کی قیمت معلوم کرنی ہے۔" class="btn btn-whatsapp w-100">
+                            <i class="fab fa-whatsapp me-1"></i> واٹس ایپ پر آرڈر کریں
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grass Cutter & Bush Cutter -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1592417817098-8f3d6ef23a28?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Grass Cutter">
+                    <div class="card-body text-end">
+                        <h4 class="card-title fw-bold">گراس کٹر اور بش کٹر</h4>
+                        <p class="card-text text-muted">گھاس اور جھاڑیاں کاٹنے والی بہترین پٹرول کٹنگ مشینیں اور باؤل کٹر۔</p>
+                        <div class="mb-3">
+                            <span class="price-badge">2-Stroke & 4-Stroke Engines</span>
+                        </div>
+                        <a href="https://wa.me/923030549454?text=السلام علیکم! مجھے گراس کٹر / بش کٹر کی قیمت معلوم کرنی ہے۔" class="btn btn-whatsapp w-100">
+                            <i class="fab fa-whatsapp me-1"></i> واٹس ایپ پر آرڈر کریں
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drill Machine & Angle Grinder -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Drill & Grinder">
+                    <div class="card-body text-end">
+                        <h4 class="card-title fw-bold">ڈرل مشین اور اینگل گرائنڈر</h4>
+                        <p class="card-text text-muted">ہیوی ڈیوٹی امپیکٹ ڈرل، گرائنڈر اور کٹنگ ٹولز۔</p>
+                        <div class="mb-3">
+                            <span class="price-badge">مختلف سائز اور برانڈز</span>
+                        </div>
+                        <a href="https://wa.me/923030549454?text=السلام علیکم! مجھے ڈرل مشین اور گرائنڈر کی قیمت معلوم کرنی ہے۔" class="btn btn-whatsapp w-100">
+                            <i class="fab fa-whatsapp me-1"></i> واٹس ایپ پر آرڈر کریں
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Electric Blower -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Electric Blower">
+                    <div class="card-body text-end">
+                        <h4 class="card-title fw-bold">الیکٹرک ایئر بلور (Blower)</h4>
+                        <p class="card-text text-muted">صفائی اور تیز ہوا کے لیے بہترین کوالٹی کے الیکٹرک بلور۔</p>
+                        <div class="mb-3">
+                            <span class="price-badge">ویری ایبل اسپیڈ کنٹرول</span>
+                        </div>
+                        <a href="https://wa.me/923030549454?text=السلام علیکم! مجھے الیکٹرک بلور کی قیمت معلوم کرنی ہے۔" class="btn btn-whatsapp w-100">
+                            <i class="fab fa-whatsapp me-1"></i> واٹس ایپ پر آرڈر کریں
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
-
-        <div class="product">
-            <div class="product-image">
-                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=600&auto=format&fit=crop" alt="مونو بلاک پمپ">
-            </div>
-            <h3>مونو بلاک پمپ</h3>
-            <p class="description">گھریلو اور کمرشل استعمال کے لیے (½ HP سے 10HP تک)</p>
-            
-            <div class="price-list">
-                <div class="price-item"><span>½ HP Copper:</span> <span class="price-val">Rs. 9,500</span></div>
-                <div class="price-item"><span>½ HP Silver:</span> <span class="price-val">Rs. 7,500</span></div>
-                <div class="price-item"><span>1 HP Copper:</span> <span class="price-val">Rs. 15,000</span></div>
-                <div class="price-item"><span>1 HP Silver:</span> <span class="price-val">Rs. 10,500</span></div>
-            </div>
-
-            <button class="order-btn" onclick="order('مونو بلاک پمپ')">
-                واٹس ایپ پر آرڈر کریں
-            </button>
-        </div>
-
-        <div class="product">
-            <div class="product-image">
-                <img src="https://images.unsplash.com/photo-1596706059223-9585675f8249?q=80&w=600&auto=format&fit=crop" alt="الیکٹرک موٹر">
-            </div>
-            <h3>الیکٹرک موٹر</h3>
-            <p class="description">ہر کوالٹی میں دستیاب (½ HP سے 10HP تک)</p>
-            
-            <div class="price-list">
-                <div class="price-item"><span>½ HP Copper:</span> <span class="price-val">Rs. 10,500</span></div>
-                <div class="price-item"><span>½ HP Silver:</span> <span class="price-val">Rs. 8,000</span></div>
-                <div class="price-item"><span>1 HP سے 10 HP:</span> <span class="price-val">قیمت معلوم کریں</span></div>
-            </div>
-
-            <button class="order-btn" onclick="order('الیکٹرک موٹر')">
-                واٹس ایپ پر آرڈر کریں
-            </button>
-        </div>
-
-        <div class="product">
-            <div class="product-image">
-                <img src="https://images.unsplash.com/photo-1522071823991-37d45f312891?q=80&w=600&auto=format&fit=crop" alt="اسپیئر پارٹس">
-            </div>
-            <h3>اسپیئر پارٹس</h3>
-            <p class="description">پمپ اور موٹر کے تمام ضروری اور معیاری پرزے دستیاب ہیں</p>
-            
-            <div class="price-list">
-                <div class="price-item"><span>تمام پرزہ جات:</span> <span class="price-val">مناسب قیمت</span></div>
-            </div>
-
-            <button class="order-btn" onclick="order('اسپیئر پارٹس')">
-                واٹس ایپ پر آرڈر کریں
-            </button>
-        </div>
-
     </div>
-</section>
 
-<section class="contact" id="contact">
-    <h2>ہم سے رابطہ کریں</h2>
-    <p>مشینری کی قیمت، آرڈر اور مزید معلومات کے لیے واٹس ایپ پر رابطہ کریں۔</p>
-    <br>
-    <a class="btn" href="https://wa.me/923030549454">📱 واٹس ایپ: 03030549454</a>
-</section>
-
-<footer>
-    © 2026 Asim Machinery Store - تمام حقوق محفوظ ہیں۔
-</footer>
-
-<script>
-function order(product) {
-    const phone = "923030549454";
-    const message = "السلام علیکم! مجھے " + product + " کی قیمت اور آرڈر کے بارے میں معلومات چاہیے۔";
-    const url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
-    window.open(url, "_blank");
-}
-</script>
+    <!-- Footer -->
+    <div class="footer text-center">
+        <div class="container">
+            <h5>عاصم مشینری اسٹور</h5>
+            <p class="mb-1">تمام ہول سیل اور ریٹیل آرڈرز کے لیے رابطہ کریں</p>
+            <p class="fw-bold"><i class="fab fa-whatsapp me-1"></i> 03030549454</p>
+            <small>&copy; 2026 Asim Machinery Store. All Rights Reserved.</small>
+        </div>
+    </div>
 
 </body>
 </html>
