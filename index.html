@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asim Machinery Store</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #222;
+        }
+
+        header {
+            background: #0b3d91;
+            color: white;
+            padding: 18px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 8px;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0b3d91, #1769d1);
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #f4b400;
+            color: #111;
+            padding: 13px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 5px;
+        }
+
+        .section {
+            padding: 50px 6%;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 30px;
+            color: #0b3d91;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .product {
+            background: white;
+            padding: 22px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border: 1px solid #e1e8f0;
+        }
+
+        .product-image {
+            height: 150px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            overflow: hidden;
+            background: #e8eef7;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #111;
+        }
+
+        .description {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .price-list {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 15px;
+            text-align: right;
+            border: 1px solid #edf2f7;
+        }
+
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            border-bottom: 1px dashed #cbd5e1;
+            font-size: 15px;
+        }
+
+        .price-item:last-child {
+            border-bottom: none;
+        }
+
+        .price-val {
+            color: #0b3d91;
+            font-weight: bold;
+        }
+
+        .order-btn {
+            border: none;
+            background: #25d366;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .contact {
+            background: white;
+            text-align: center;
+            padding: 50px 20px;
+            border-top: 1px solid #eaeaea;
+        }
+
+        footer {
+            background: #17202a;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 650px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        ⚙️ Asim Machinery Store
+    </div>
+    <nav>
+        <a href="#home">ہوم</a>
+        <a href="#products">مصنوعات</a>
+        <a href="#contact">رابطہ</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h1>Asim Machinery Store</h1>
+    <p>معیاری مشینری، پمپ اور موٹرز مناسب قیمت پر</p>
+    <a class="btn" href="#products">مصنوعات دیکھیں</a>
+    <a class="btn" href="https://wa.me/923030549454">📱 واٹس ایپ پر رابطہ کریں</a>
+</section>
+
+<section class="section" id="products">
+    <h2>ہماری مصنوعات</h2>
+
+    <div class="products">
+
+        <div class="product">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1596706059223-9585675f8249?q=80&w=600&auto=format&fit=crop" alt="سبمرسیبل پمپ">
+            </div>
+            <h3>سبمرسیبل پمپ</h3>
+            <p class="description">ہماری پاس سبمرسیبل پمپ کی ہر کوالٹی موجود ہے (1HP سے 50HP تک)</p>
+            
+            <div class="price-list">
+                <div class="price-item"><span>1 HP:</span> <span class="price-val">Rs. 22,000</span></div>
+                <div class="price-item"><span>1.5 HP:</span> <span class="price-val">Rs. 26,000</span></div>
+                <div class="price-item"><span>2 HP:</span> <span class="price-val">Rs. 30,000</span></div>
+                <div class="price-item"><span>3 HP سے 50 HP:</span> <span class="price-val">قیمت معلوم کریں</span></div>
+            </div>
+
+            <button class="order-btn" onclick="order('سبمرسیبل پمپ')">
+                واٹس ایپ پر آرڈر کریں
+            </button>
+        </div>
+
+        <div class="product">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=600&auto=format&fit=crop" alt="مونو بلاک پمپ">
+            </div>
+            <h3>مونو بلاک پمپ</h3>
+            <p class="description">گھریلو اور کمرشل استعمال کے لیے (½ HP سے 10HP تک)</p>
+            
+            <div class="price-list">
+                <div class="price-item"><span>½ HP Copper:</span> <span class="price-val">Rs. 9,500</span></div>
+                <div class="price-item"><span>½ HP Silver:</span> <span class="price-val">Rs. 7,500</span></div>
+                <div class="price-item"><span>1 HP Copper:</span> <span class="price-val">Rs. 15,000</span></div>
+                <div class="price-item"><span>1 HP Silver:</span> <span class="price-val">Rs. 10,500</span></div>
+            </div>
+
+            <button class="order-btn" onclick="order('مونو بلاک پمپ')">
+                واٹس ایپ پر آرڈر کریں
+            </button>
+        </div>
+
+        <div class="product">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1596706059223-9585675f8249?q=80&w=600&auto=format&fit=crop" alt="الیکٹرک موٹر">
+            </div>
+            <h3>الیکٹرک موٹر</h3>
+            <p class="description">ہر کوالٹی میں دستیاب (½ HP سے 10HP تک)</p>
+            
+            <div class="price-list">
+                <div class="price-item"><span>½ HP Copper:</span> <span class="price-val">Rs. 10,500</span></div>
+                <div class="price-item"><span>½ HP Silver:</span> <span class="price-val">Rs. 8,000</span></div>
+                <div class="price-item"><span>1 HP سے 10 HP:</span> <span class="price-val">قیمت معلوم کریں</span></div>
+            </div>
+
+            <button class="order-btn" onclick="order('الیکٹرک موٹر')">
+                واٹس ایپ پر آرڈر کریں
+            </button>
+        </div>
+
+        <div class="product">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1522071823991-37d45f312891?q=80&w=600&auto=format&fit=crop" alt="اسپیئر پارٹس">
+            </div>
+            <h3>اسپیئر پارٹس</h3>
+            <p class="description">پمپ اور موٹر کے تمام ضروری اور معیاری پرزے دستیاب ہیں</p>
+            
+            <div class="price-list">
+                <div class="price-item"><span>تمام پرزہ جات:</span> <span class="price-val">مناسب قیمت</span></div>
+            </div>
+
+            <button class="order-btn" onclick="order('اسپیئر پارٹس')">
+                واٹس ایپ پر آرڈر کریں
+            </button>
+        </div>
+
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>ہم سے رابطہ کریں</h2>
+    <p>مشینری کی قیمت، آرڈر اور مزید معلومات کے لیے واٹس ایپ پر رابطہ کریں۔</p>
+    <br>
+    <a class="btn" href="https://wa.me/923030549454">📱 واٹس ایپ: 03030549454</a>
+</section>
+
+<footer>
+    © 2026 Asim Machinery Store - تمام حقوق محفوظ ہیں۔
+</footer>
+
+<script>
+function order(product) {
+    const phone = "923030549454";
+    const message = "السلام علیکم! مجھے " + product + " کی قیمت اور آرڈر کے بارے میں معلومات چاہیے۔";
+    const url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+    window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
