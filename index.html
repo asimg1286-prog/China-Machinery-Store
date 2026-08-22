@@ -3,149 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>چائنا مشینری اسٹور - Asim Ali</title>
+    <title>چائنا مشینری سٹور - Asim Ali</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: #f4f6f9; color: #333; line-height: 1.6; }
-        header { background: linear-gradient(135deg, #0d47a1, #1976d2); color: white; text-align: center; padding: 25px 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        header h1 { font-size: 2rem; margin-bottom: 5px; }
-        header p { font-size: 1.1rem; opacity: 0.9; }
-        .contact-header { margin-top: 10px; font-size: 1.2rem; font-weight: bold; background: rgba(255, 255, 255, 0.2); display: inline-block; padding: 6px 16px; border-radius: 20px; }
-        .owner-tag { font-size: 1rem; margin-top: 5px; font-weight: bold; }
-        .container { max-width: 1100px; margin: 20px auto; padding: 0 15px; }
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .product-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; justify-content: space-between; }
-        .product-card:hover { transform: translateY(-5px); box-shadow: 0 6px 16px rgba(0,0,0,0.12); }
-        .product-img { width: 100%; height: 220px; object-fit: cover; background-color: #eee; }
-        .product-info { padding: 15px; text-align: center; }
-        .product-title { font-size: 1.25rem; font-weight: bold; color: #0d47a1; margin-bottom: 10px; }
-        .btn-group { display: flex; gap: 10px; padding: 0 15px 15px 15px; }
-        .btn { flex: 1; text-decoration: none; padding: 10px; border-radius: 6px; font-weight: bold; text-align: center; color: white; display: flex; align-items: center; justify-content: center; font-size: 0.95rem; }
-        .btn-call { background-color: #007bff; }
-        .btn-whatsapp { background-color: #25d366; }
-        .btn:hover { opacity: 0.9; }
-        footer { text-align: center; padding: 25px; background-color: #111; color: white; margin-top: 40px; font-size: 1.1rem; line-height: 1.8; }
-        footer a { color: #25d366; text-decoration: none; font-weight: bold; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styling */
+        header {
+            background: linear-gradient(135deg, #0d52bf, #083b8a);
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+        }
+
+        header h2 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
+        .owner-info {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background-color: #25d366;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background-color: #1eb954;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        /* Wholesale Banner & Introduction */
+        .intro-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-top: 5px solid #0d52bf;
+        }
+
+        .intro-card h3 {
+            color: #0d52bf;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .intro-card p {
+            font-size: 1.1rem;
+            color: #444;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Section Titles */
+        .section-title {
+            color: #083b8a;
+            font-size: 1.4rem;
+            margin: 25px 0 15px 0;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #0d52bf;
+        }
+
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .benefit-card {
+            background: #ffffff;
+            padding: 18px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+            border-right: 4px solid #25d366;
+        }
+
+        .benefit-card h4 {
+            color: #083b8a;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        /* Products List Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .product-item {
+            background: #eef4ff;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            color: #083b8a;
+            border: 1px solid #d0e1fd;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #083b8a;
+            color: white;
+            margin-top: 30px;
+            font-size: 0.95rem;
+        }
     </style>
 </head>
 <body>
 
+    <!-- Header Section -->
     <header>
-        <h1>چائنا مشینری اسٹور</h1>
-        <p>China Machinery Store</p>
-        <div class="owner-tag">Owner: Asim Ali (عاصم علی)</div>
-        <div class="contact-header">📞 رابطہ نمبر: 03030549454</div>
+        <h1>چائنا مشینری سٹور</h1>
+        <h2>China Machinery Store</h2>
+        <div class="owner-info">مالک: عاصم علی (Asim Ali)</div>
+        <a href="tel:03030549454" class="contact-btn">📞 رابطہ نمبر: 03030549454</a>
     </header>
 
     <div class="container">
-        <div class="product-grid">
 
-            <div class="product-card">
-                <img src="Blower.jpg" alt="بلور" class="product-img">
-                <div class="product-info"><div class="product-title">بلور (Blower)</div></div>
-                <div class="btn-group">
-                    <a href="tel:03030549454" class="btn btn-call">کال کریں</a>
-                    <a href="https://wa.me/923030549454?text=السلام%20علیکم،%20مجھے%20بلور%20(Blower)%20کے%20بارے%20میں%20معلومات%20چاہئیں۔" class="btn btn-whatsapp" target="_blank">واٹس ایپ</a>
-                </div>
+        <!-- Introduction & Main Banner -->
+        <section class="intro-card">
+            <h3>ہمارے پاس ہر قسم کی مشینری اور اسپیئر پارٹس مناسب ہول سیل ریٹ پر دستیاب ہیں!</h3>
+            <p>
+                <strong>چائنا مشینری سٹور</strong> پر خوش آمدید! ہم عباس حیدر مارکیٹ، راجہ بازار راولپنڈی میں معیاری اور جدید چائنا مشینری کے بااعتماد سپلائر ہیں۔ ہمارے پاس انڈسٹریل مشینری، ورکشاپ ایکوئپمنٹ، گارڈن ٹولز، اور پاور ٹولز کی وسیع رینج موجود ہے۔ ہم ڈائریکٹ امپورٹڈ اور معیاری سامان انتہائی مناسب ہول سیل نرخوں پر فراہم کرتے ہیں۔
+            </p>
+        </section>
+
+        <!-- Key Benefits -->
+        <h3 class="section-title">💡 ہمارے سٹور کے نمایاں فوائد</h3>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <h4>اعلیٰ اور مناسب ہول سیل نرخ</h4>
+                <p>عام مارکیٹ اور ریٹیل کی نسبت انتہائی مناسب اور رعایت ہول سیل ریٹ۔</p>
             </div>
-
-            <div class="product-card">
-                <img src="Petrol Chain Saw.jpg" alt="چین سا" class="product-img">
-                <div class="product-info"><div class="product-title">پٹرول چین سا (Chainsaw)</div></div>
-                <div class="btn-group">
-                    <a href="tel:03030549454" class="btn btn-call">کال کریں</a>
-                    <a href="https://wa.me/923030549454?text=السلام%20علیکم،%20مجھے%20پٹرول%20چین%20سا%20کے%20بارے%20میں%20معلومات%20چاہئیں۔" class="btn btn-whatsapp" target="_blank">واٹس ایپ</a>
-                </div>
+            <div class="benefit-card">
+                <h4>معیاری اور اوریجنل پارٹس</h4>
+                <p>صرف پائیدار اور اوریجنل چائنا مشینری اور ان کے مکمل اسپیئر پارٹس کی فراہمی۔</p>
             </div>
-
-            <div class="product-card">
-                <img src="Mono Block.jpg" alt="مونو بلاک پمپ" class="product-img">
-                <div class="product-info"><div class="product-title">مونو بلاک پمپ (Mono Block)</div></div>
-                <div class="btn-group">
-                    <a href="tel:03030549454" class="btn btn-call">کال کریں</a>
-                    <a href="https://wa.me/923030549454?text=السلام%20علیکم،%20مجھے%20مونو%20بلاک%20پمپ%20کے%20بارے%20میں%20معلومات%20چاہئیں۔" class="btn btn-whatsapp" target="_blank">واٹس ایپ</a>
-                </div>
+            <div class="benefit-card">
+                <h4>کارگو اور ڈلیوری سہولت</h4>
+                <p>راولپنڈی، اسلام آباد اور پورے پاکستان میں سامان بھجوانے کی سہولت۔</p>
             </div>
-
-            <div class="product-card">
-                <img src="Submersible Pump.jpg" alt="سبمرسیبل پمپ" class="product-img">
-                <div class="product-info"><div class="product-title">سبمرسیبل پمپ (Submersible)</div></div>
-                <div class="btn-group">
-                    <a href="tel:03030549454" class="btn btn-call">کال کریں</a>
-                    <a href="https://wa.me/923030549454?text=السلام%20علیکم،%20مجھے%20سبمرسیبل%20پمپ%20کے%20بارے%20میں%20معلومات%20چاہئیں۔" class="btn btn-whatsapp" target="_blank">واٹس ایپ</a>
-                </div>
+            <div class="benefit-card">
+                <h4>پیشہ ورانہ رہنمائی</h4>
+                <p>آپ کے کام اور ضرورت کے مطابق صحیح مشینری کا انتخاب کرنے میں مکمل رہنمائی۔</p>
             </div>
-
-            <div class="product-card">
-                <img src="Generator.jpg" alt="جنریٹر" class="product-img">
-                <div class="product-info"><div class="product-title">جنریٹر (Generator)</div></div>
-                <div class="btn-group">
-                    <a href="tel:03030549454" class="btn btn-call">کال کریں</a>
-                    <a href="https://wa.me/923030549454?text=السلام%20علیکم،%20مجھے%20جنریٹر%20کے%20بارے%20میں%20معلومات%20چاہئیں۔" class="btn btn-whatsapp" target="_blank">واٹس ایپ</a>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="Electric Motor.jpg" alt="الیکٹرک موٹر" class="product-img">
-                <div class="product-info"><div class="product-title">الیکٹرک موٹر (Electric Motor)</div></div>
-                <div class="btn-group">
-                    <a href="tel:03030549454" class="btn btn-call">کال کریں</a>
-                    <a href="https://wa.me/923030549454?text=السلام%20علیکم،%20مجھے%20الیکٹرک%20موٹر%20کے%20بارے%20میں%20معلومات%20چاہئیں۔" class="btn btn-whatsapp" target="_blank">واٹس ایپ</a>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="Manual Grass cutter.jpg" alt="گراس کٹر" class="product-img">
-                <div class="product-info"><div class="product-title">گراس کٹر (Grass Cutter)</div></div>
-                <div class="btn-group">
-                    <a href="tel:03030549454" class="btn btn-call">کال کریں</a>
-                    <a href="https://wa.me/923030549454?text=السلام%20علیکم،%20مجھے%20گراس%20کٹر%20کے%20بارے%20میں%20معلومات%20چاہئیں۔" class="btn btn-whatsapp" target="_blank">واٹس ایپ</a>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="Bush cutter.jpg" alt="بش کٹر" class="product-img">
-                <div class="product-info"><div class="product-title">بش کٹر (Bush Cutter)</div></div>
-                <div class="btn-group">
-                    <a href="tel:03030549454" class="btn btn-call">کال کریں</a>
-                    <a href="https://wa.me/923030549454?text=السلام%20علیکم،%20مجھے%20بش%20کٹر%20کے%20بارے%20میں%20معلومات%20چاہئیں۔" class="btn btn-whatsapp" target="_blank">واٹس ایپ</a>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="Elec Grinder.jpg" alt="گرائنڈر مشین" class="product-img">
-                <div class="product-info"><div class="product-title">گرائنڈر مشین (Angle Grinder)</div></div>
-                <div class="btn-group">
-                    <a href="tel:03030549454" class="btn btn-call">کال کریں</a>
-                    <a href="https://wa.me/923030549454?text=السلام%20علیکم،%20مجھے%20گرائنڈر%20مشین%20کے%20بارے%20میں%20معلومات%20چاہئیں۔" class="btn btn-whatsapp" target="_blank">واٹس ایپ</a>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="Control Box.jpg" alt="کنٹرول باکس" class="product-img">
-                <div class="product-info"><div class="product-title">کنٹرول باکس (Control Box)</div></div>
-                <div class="btn-group">
-                    <a href="tel:03030549454" class="btn btn-call">کال کریں</a>
-                    <a href="https://wa.me/923030549454?text=السلام%20علیکم،%20مجھے%20کنٹرول%20باکس%20کے%20بارے%20میں%20معلومات%20چاہئیں۔" class="btn btn-whatsapp" target="_blank">واٹس ایپ</a>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="SpareParts.jpg" alt="اسپیئر پارٹس" class="product-img">
-                <div class="product-info"><div class="product-title">اسپیئر پارٹس (Spare Parts)</div></div>
-                <div class="btn-group">
-                    <a href="tel:03030549454" class="btn btn-call">کال کریں</a>
-                    <a href="https://wa.me/923030549454?text=السلام%20علیکم،%20مجھے%20اسپیئر%20پارٹس%20کے%20بارے%20میں%20معلومات%20چاہئیں۔" class="btn btn-whatsapp" target="_blank">واٹس ایپ</a>
-                </div>
-            </div>
-
         </div>
+
+        <!-- Available Products -->
+        <h3 class="section-title">🛠️ ہمارے پاس دستیاب سامان</h3>
+        <div class="products-grid">
+            <div class="product-item">⚡ پاور ٹولز (ڈرل، گرائنڈر)</div>
+            <div class="product-item">🌬️ بلور (Blower)</div>
+            <div class="product-item">🪚 چین ساء (Chain Saw)</div>
+            <div class="product-item">🌱 گارڈن اور فارمنگ ٹولز</div>
+            <div class="product-item">🔧 اوریجنل اسپیئر پارٹس</div>
+            <div class="product-item">⚙️ ورکشاپ ایکوئپمنٹ</div>
+        </div>
+
     </div>
 
+    <!-- Footer Section -->
     <footer>
-        <p><strong>پراپرائیٹر: عاصم علی (Asim Ali)</strong></p>
-        <p>رابطہ نمبر: <a href="tel:03030549454">03030549454</a></p>
-        <p>&copy; 2026 China Machinery Store. All rights reserved.</p>
+        <p>چائنا مشینری سٹور - عباس حیدر مارکیٹ، راجہ بازار، راولپنڈی</p>
+        <p>پروپرائٹر: عاصم علی | فون: 03030549454</p>
     </footer>
 
 </body>
